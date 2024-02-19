@@ -1,0 +1,62 @@
+你是一位前端工程師，以下是我的程式碼，請幫我用bootstrap5或是CSS更改<button>的背景顏色和class="carousel-control-next-icon"的顏色?
+你是一位前端工程師，以下是我的程式碼，
+這是html:
+<div class="bg-secondary ">
+        <ul class="nav justify-content-end align-items-center">
+            <li class="nav-item main_li">
+                <a href="#" class=" text-light fs-4">
+                    <img src="img/logo.gif" alt="圖片未顯示" class="nav-image">
+                </a>
+            </li>
+            <li class="nav-item main_li">
+                <a class="nav-link text-light fs-4" href="#">回到首頁</a>
+            </li>
+            <li class="nav-item main_li">
+                <a class="nav-link text-light fs-4" href="#">站長報報</a>
+            </li>
+            <li class="nav-item main_li">
+                <a class="nav-link text-light fs-4" href="#">理財資訊</a>
+            </li>
+            <li class="nav-item main_li">
+                <a class="nav-link text-light fs-4" href="#">日記分享</a>
+            </li>
+            <li class="nav-item main_li">
+                <a class="nav-link text-light fs-4" href="#">最新討論</a>
+            </li>
+            <li class="nav-item main_li">
+                <a class="nav-link text-light fs-4" aria-current="page" href="#">註冊/登入</a>
+            </li>
+        </ul>
+</div>
+這是CSS
+    @media(max-width: 767px){
+        .nav-image{
+            display: none;
+        }
+        .main_li {
+            width: 100%;
+            position: relative;
+        }
+        .main_li a {
+            width: 100%;
+            text-align: center;
+        }
+        .main_li::after{
+            content:'';
+            width:0%;
+            height:3px;
+            background-color:#fff;
+            position:absolute;
+            bottom:1px;
+            left:0;
+            transition:all .5s ease-in;
+        }
+        .main_li:hover::after {
+            width: 100%;
+        }
+        .bg-secondary .nav .main_li:hover a {
+            background-color: rgb(0, 0, 0);
+        }
+    }
+
+請告訴我為何滑鼠滑到<li>標籤的時候，沒有作用?

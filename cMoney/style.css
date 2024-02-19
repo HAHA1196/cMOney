@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+body{
+    position: relative;
+}
+.main_li{
+    position: relative;
+}
+
+/* LOGO */
+.nav_logo a{
+    position: absolute;
+    top: 22px;
+    left: 150px;
+}
+.main_li::after{
+    content:'';
+    width:0%;
+    height:3px;
+    background-color:#fff;
+    position:absolute;
+    bottom:1px;
+    left:0;
+    transition:all .5s ease-in;
+}
+.main_li:hover::after {
+    width: 100%;
+}
+.bg-secondary .nav .main_li:hover a {
+    background-color: rgb(0, 0, 0);
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.nav-image {
+    max-height: 55px;
+    position: absolute;
+    top: -30px;
+    left: -1050px;
+}
+main{
+    position: relative;
+}
+.carousel-item img {
+    width: 100%; /* 确保图片宽度与容器宽度一致 */
+    height: 800px; /* 设置一个固定的高度 */
+    object-fit: cover; /* 确保图片覆盖整个容器，但保持它的纵横比 */
+}
+.carousel{
+    margin: 20px;
+}
+.carousel-control-prev-icon {
+    background-color: rgb(51, 51, 51); 
+    border-radius: 50%; /* 使元素成为完美的圆形 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    /* 根据需要调整背景、边框等其他样式 */
+}
+
+.carousel-control-next-icon{
+    background-color: rgb(51, 51, 51);
+    border-radius: 50%; /* 使元素成为完美的圆形 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    /* 根据需要调整背景、边框等其他样式 */
+}
+
+.black_block {
+    position: absolute; /* 绝对定位 */
+    top: 200px; /* 从顶部开始 */
+    left: 300px; /* 从左边开始 */
+    width: 70%; /* 覆盖整个宽度 */
+    height: 50%; /* 覆盖整个高度 */
+    background-color: rgba(0,0,0,0.3);
+    color: white; /* 设置文字颜色 */
+    z-index: 10; /* 确保它位于 carousel 之上 */
+    /* 根据需要调整其他样式 */
+    
+}
+.black_block h1{
+    color: #fff;
+    font-weight: 700;
+}
+.black_block p{
+    color: #fff;
+    font-size: 1rem;
+}
+/* 段落縮排 */
+.p-indent{
+    text-indent: 40px;
+}
+
+/* 學員分享 */
+.member-text{
+    color: #fff;
+    text-align: center;
+}
+/* 向上按鈕 */
+.circle {
+    position: absolute;
+    width: 70px;         /* 圓的寬度 */
+    height: 70px;        /* 圓的高度 */
+    right: 0;
+    bottom: 0;
+    background-color: #3498db; /* 圓的背景顏色，你可以根據需要更改顏色 */
+    border-radius: 50%;  /* 使邊框半徑為寬度的一半，從而創建圓形 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* RWD斷點 */
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+    .nav-image{
+        position: absolute;
+        max-height: 55px;
+        top: -30px;
+        left: -150px;
+    }
+    /* main{
+        display: none;
+    } */
+}
+@media(max-width: 767px){
+    .nav-image{
+        display: none;
+    }
+    .main_li {
+        width: 100%;
+        position: relative;
+    }
+    .main_li a {
+        width: 100%;
+        text-align: center;
+    }
+    .main_li::after{
+        content:'';
+        width:0%;
+        height:3px;
+        background-color:#fff;
+        position:absolute;
+        bottom:1px;
+        left:0;
+        transition:all .5s ease-in;
+    }
+    .main_li:hover::after {
+        width: 100%;
+    }
+    .bg-secondary .nav .main_li:hover a {
+        background-color: rgb(0, 0, 0)!important;
+    }
+    main{
+        display: none;
+    }
+
+}
+@media(max-width: 414px){
+    .member-list{
+        margin-bottom: 40px!important;
+    }
+    main{
+        display: none;
+    }
+}
+
